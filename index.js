@@ -12,7 +12,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 const uploader = multer();
 // 读取配置数据
-const data = JSON.parse(fs.readFileSync("./data.json", "utf8"));
+const data = JSON.parse(fs.readFileSync("data.json", "utf8"));
 // 创建 Telegram 机器人实例
 const bot = new telegramBot(data.token, {
   'polling': true,
